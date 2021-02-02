@@ -68,11 +68,11 @@ namespace KeyboardAudioVisualizer
             surface.RegisterUpdateTrigger(UpdateTrigger);
 
             LoadDevices(surface, CorsairDeviceProvider.Instance);
-            LoadDevices(surface, CoolerMasterDeviceProvider.Instance);
-            LoadDevices(surface, NovationDeviceProvider.Instance);
-            LoadDevices(surface, RazerDeviceProvider.Instance);
-            LoadDevices(surface, LogitechDeviceProvider.Instance);
-            LoadDevices(surface, SteelSeriesDeviceProvider.Instance);
+            // LoadDevices(surface, CoolerMasterDeviceProvider.Instance);
+            // LoadDevices(surface, NovationDeviceProvider.Instance);
+            // LoadDevices(surface, RazerDeviceProvider.Instance);
+            // LoadDevices(surface, LogitechDeviceProvider.Instance);
+            // LoadDevices(surface, SteelSeriesDeviceProvider.Instance);
 
             surface.AlignDevices();
 
@@ -154,10 +154,7 @@ namespace KeyboardAudioVisualizer
 
         private void LoadDevices(RGBSurface surface, IRGBDeviceProvider deviceProvider)
         {
-            surface.LoadDevices(deviceProvider, RGBDeviceType.Keyboard | RGBDeviceType.LedMatrix
-                                              | RGBDeviceType.Mousepad | RGBDeviceType.LedStripe
-                                              | RGBDeviceType.Mouse | RGBDeviceType.Headset
-                                              | RGBDeviceType.HeadsetStand);
+            surface.LoadDevices(deviceProvider, RGBDeviceType.Keyboard);
         }
 
         //TODO DarthAffe 12.09.2017: This is just a big mess - is this worth to rework before arge?
